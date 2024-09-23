@@ -257,7 +257,6 @@ img {
   top: 19rem;
 }
 
-
 .ruleNextButtonCombo {
   background-color: transparent;
   border: 2px solid var(--white);
@@ -276,8 +275,7 @@ img {
   left: 82%;
   padding: 0;
   margin: 0;
-  z-index:100;
-
+  z-index: 100;
 }
 #gameRulesHeading {
   display: block;
@@ -297,7 +295,7 @@ img {
   display: flex;
   gap: 5rem;
   width: 100%;
-  top: 6.4rem;
+  top: 3.7rem;
   position: relative;
   justify-content: center;
   align-items: center;
@@ -455,11 +453,10 @@ img {
 #nextButton {
   display: none;
 }
-#nextButton:hover,#ruleButton:hover{
-  letter-spacing: .26em;
+#nextButton:hover,
+#ruleButton:hover {
+  letter-spacing: 0.26em;
   transform: scale(1.2);
-  
-  
 }
 /* Common styles for all stars */
 .stars {
