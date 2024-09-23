@@ -239,13 +239,24 @@ img {
 }
 
 #nextButton {
-  left: 90.2%;
-
+  display: inline-block;
+  padding: 7px 10px;
+  border: 2px solid var(--white);
+  color: var(--white);
+  background-color: transparent;
+  left: 94.2%;
   text-align: center;
-  /* padding-top: 6px;
-  padding-left: 15px; */
-  min-block-size: 20px;
+  min-block-size: 40px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 24.61px;
+  letter-spacing: 0.1em;
+  border-radius: 0.5rem;
+  position: relative;
+  top: 19rem;
 }
+
 
 .ruleNextButtonCombo {
   background-color: transparent;
@@ -265,6 +276,8 @@ img {
   left: 82%;
   padding: 0;
   margin: 0;
+  z-index:100;
+
 }
 #gameRulesHeading {
   display: block;
@@ -442,7 +455,12 @@ img {
 #nextButton {
   display: none;
 }
-
+#nextButton:hover,#ruleButton:hover{
+  letter-spacing: .26em;
+  transform: scale(1.2);
+  
+  
+}
 /* Common styles for all stars */
 .stars {
   width: 30px;
