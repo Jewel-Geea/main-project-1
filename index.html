@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>main-project-1</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dangrek&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="parent1">
+      <div class="gameTitle">
+        <ul>
+          <li>ROCK</li>
+          <li>PAPER</li>
+          <li>SCISSORS</li>
+        </ul>
+      </div>
+      <div class="parent_u">
+        <div class="u1">
+          <ul>
+            <li>COMPUTER</li>
+            <li>SCORE</li>
+            <li id="computerScore">0</li>
+          </ul>
+        </div>
+        <div class="u2">
+          <ul>
+            <li>YOUR</li>
+            <li>SCORE</li>
+            <li id="playerScore">0</li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- parent_button div contians the options to choose from [stone,scissor,paper] -->
+    <div class="parent_button">
+      <div class="b1Andb2">
+        <!-- first button (stone)-->
+        <button class="stone" onclick='options("stone")' id="first-button">
+          <img src="images/stone.png" alt="rock image" />
+        </button>
+        <hr class="border" id="b1" />
+        <!-- 2nd button (scissor) -->
+        <button id="second-button" onclick='options("scissor")'>
+          <img src="images/scissor.png" alt="scissor image" id="second-image" />
+        </button>
+        <hr class="border" id="b2" />
+      </div>
+      <!-- 3rd button (paper) -->
+      <button id="third-button" onclick='options("paper")'>
+        <img src="images/paper.png" alt="paper image" id="third-image" />
+      </button>
+      <hr class="border" id="b3" />
+    </div>
+
+    <div class="gameRules">
+      <button id="xButton" onclick="showRules(0)">X</button>
+      <h1 id="gameRulesHeading">Game Rules</h1>
+      <ul>
+        <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+        <li>
+          Agree ahead of time whether you’ll count off “rock, paper, scissors,
+          shoot” or just “rock, paper, scissors.”
+        </li>
+        <li>
+          Use rock, paper, scissors to settle minor decisions or simply play to
+          pass the time
+        </li>
+        <li>
+          If both players lay down the same hand, each player lays down another
+          hand
+        </li>
+      </ul>
+    </div>
+    <div class="ruleNextDivCombo">
+      <button
+        class="ruleNextButtonCombo"
+        id="ruleButton"
+        onclick="showRules(1)">
+        RULES
+      </button>
+      <a href="victory.html">
+        <button
+          class="ruleNextButtonCombo"
+          id="nextButton"
+          onclick="nextClear()">
+          NEXT
+        </button>
+      </a>
+    </div>
+    <!-- Player lost scissor stone  -->
+    <!-- Player lost scissors against stone -->
+    <div class="scissorStone allClass">
+      <div class="playerparentdiv">
+        <h1 class="playerPicked pick">YOU PICKED</h1>
+        <button class="scissor"><img src="images/scissor.png" /></button>
+      </div>
+      <div class="loseMessage">
+        <p class="loseHeading">
+          <span>YOU LOST</span><br /><span>AGAINST PC</span>
+        </p>
+        <button class="playAgain">Play Again</button>
+      </div>
+      <div class="pcparentdiv">
+        <h1 class="computerPicked pick">PC PICKED</h1>
+        <button class="stone"><img src="images/stone.png" /></button>
+      </div>
+    </div>
+
+    <!-- Player lost paper against scissors -->
+    <div class="paperScissor allClass">
+      <div class="playerparentdiv">
+        <h1 class="playerPicked pick">YOU PICKED</h1>
+        <button class="paper"><img src="images/paper.png" /></button>
+      </div>
+      <div class="loseMessage">
+        <p class="loseHeading">
+          <span>YOU LOST</span><br /><span>AGAINST PC</span>
+        </p>
+        <button class="playAgain">Play Again</button>
+      </div>
+      <div class="pcparentdiv">
+        <h1 class="computerPicked pick">PC PICKED</h1>
+        <button class="scissor"><img src="images/scissor.png" /></button>
+      </div>
+    </div>
+
+    <!-- Player lost stone against paper -->
+    <div class="stonePaper allClass">
+      <div class="playerparentdiv">
+        <h1 class="playerPicked pick">YOU PICKED</h1>
+        <button class="stone"><img src="images/stone.png" /></button>
+      </div>
+      <div class="loseMessage">
+        <p class="loseHeading">
+          <span>YOU LOST</span><br /><span>AGAINST PC</span>
+        </p>
+        <button class="playAgain">Play Again</button>
+      </div>
+      <div class="pcparentdiv">
+        <h1 class="computerPicked pick">PC PICKED</h1>
+        <button class="paper"><img src="images/paper.png" /></button>
+      </div>
+    </div>
+
+    <!-- Player won stone against scissors -->
+    <div class="rockScissor allClass">
+      <div class="playerparentdiv">
+        <h1 class="playerPicked pick">YOU PICKED</h1>
+        <button class="stone"><img src="images/stone.png" /></button>
+      </div>
+      <div class="winMessage">
+        <p class="winHeading">
+          <span>YOU WON</span><br /><span>AGAINST PC</span>
+        </p>
+        <button class="playAgain">Play Again</button>
+      </div>
+      <div class="pcparentdiv">
+        <h1 class="computerPicked pick">PC PICKED</h1>
+        <button class="scissor"><img src="images/scissor.png" /></button>
+      </div>
+    </div>
+
+    <!-- Player won paper against rock -->
+    <div class="paperRock allClass">
+      <div class="playerparentdiv">
+        <h1 class="playerPicked pick">YOU PICKED</h1>
+        <button class="paper"><img src="images/paper.png" /></button>
+      </div>
+      <div class="winMessage">
+        <p class="winHeading">
+          <span>YOU WON</span><br /><span>AGAINST PC</span>
+        </p>
+        <button class="playAgain">Play Again</button>
+      </div>
+      <div class="pcparentdiv">
+        <h1 class="computerPicked pick">PC PICKED</h1>
+        <button class="stone"><img src="images/stone.png" /></button>
+      </div>
+    </div>
+
+    <!-- Player won scissors against paper -->
+    <div class="scissorPaper allClass">
+      <div class="playerparentdiv">
+        <h1 class="playerPicked pick">YOU PICKED</h1>
+        <button class="scissor"><img src="images/scissor.png" /></button>
+      </div>
+      <div class="winMessage">
+        <p class="winHeading">
+          <span>YOU WON</span><br /><span>AGAINST PC</span>
+        </p>
+        <button class="playAgain">Play Again</button>
+      </div>
+      <div class="pcparentdiv">
+        <h1 class="computerPicked pick">PC PICKED</h1>
+        <button class="paper"><img src="images/paper.png" /></button>
+      </div>
+    </div>
+
+    <!-- Tie for paper -->
+    <div class="paperPaper allClass">
+      <div class="playerparentdiv">
+        <h1 class="playerPicked pick">YOU PICKED</h1>
+        <button class="paper"><img src="images/paper.png" /></button>
+      </div>
+      <div class="tieMessage">
+        <p class="tieHeading"><span>TIE UP</span><br /></p>
+        <button class="playAgain">REPLAY</button>
+      </div>
+      <div class="pcparentdiv">
+        <h1 class="computerPicked pick">PC PICKED</h1>
+        <button class="paper"><img src="images/paper.png" /></button>
+      </div>
+    </div>
+
+    <!-- Tie for stone -->
+    <div class="stoneStone allClass">
+      <div class="playerparentdiv">
+        <h1 class="playerPicked pick">YOU PICKED</h1>
+        <button class="stone"><img src="images/stone.png" /></button>
+      </div>
+      <div class="tieMessage">
+        <p class="tieHeading"><span>TIE UP</span><br /></p>
+        <button class="playAgain">REPLAY</button>
+      </div>
+      <div class="pcparentdiv">
+        <h1 class="computerPicked pick">PC PICKED</h1>
+        <button class="stone"><img src="images/stone.png" /></button>
+      </div>
+    </div>
+
+    <!-- Tie for scissors -->
+    <div class="scissorScissor allClass">
+      <div class="playerparentdiv">
+        <h1 class="playerPicked pick">YOU PICKED</h1>
+        <button class="scissor"><img src="images/scissor.png" /></button>
+      </div>
+      <div class="tieMessage">
+        <p class="tieHeading"><span>TIE UP</span><br /></p>
+        <button class="playAgain">REPLAY</button>
+      </div>
+      <div class="pcparentdiv">
+        <h1 class="computerPicked pick">PC PICKED</h1>
+        <button class="scissor"><img src="images/scissor.png" /></button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

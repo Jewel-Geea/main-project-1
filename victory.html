@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Victory Page</title>
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Parent container that holds the star animation, trophy image, and victory message -->
+    <div class="parentVictory">
+      <div class="starAnimation">
+        <img class="stars" id="stars1" src="images/Star1.png" />
+        <img class="stars" id="stars2" src="images/Star2.png" />
+        <img class="stars" id="stars3" src="images/Star3.png" />
+        <img class="stars" id="stars4" src="images/Star4.png" />
+        <img class="stars" id="stars5" src="images/Star5.png" />
+        <img class="stars" id="stars6" src="images/Star6.png" />
+        <img class="stars" id="stars7" src="images/Star7.png" />
+        <img class="stars" id="stars8" src="images/Star8.png" />
+        <img class="stars" id="stars9" src="images/Star9.png" />
+      </div>
+      <img id="victoryImage" src="images/trophy.png" alt="Victory Image" />
+
+      <div class="winMessage">
+        <p class="winHeading victoryHeading">
+          <span>HURRAY!!</span><br /><span>YOU WON THE GAME</span>
+        </p>
+        <a href="index.html"><button class="playAgain">Play Again</button></a>
+      </div>
+    <!-- Hidden game rules section -->
+    <div class="gameRules">
+      <button id="xButton" onclick="showRules(0)">X</button>
+      <h1 id="gameRulesHeading">Game Rules</h1>
+      <ul>
+        <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+        <li>
+          Agree ahead of time whether you’ll count off “rock, paper, scissors,
+          shoot” or just “rock, paper, scissors.”
+        </li>
+        <li>
+          Use rock, paper, scissors to settle minor decisions or simply play to
+          pass the time.
+        </li>
+        <li>
+          If both players lay down the same hand, each player lays down another
+          hand.
+        </li>
+      </ul>
+    </div>
+
+    <button class="ruleNextButtonCombo" id="ruleButton" onclick="showRules(1)">
+      RULES
+    </button>
+    <script src="script.js"></script>
+  </body>
+</html>

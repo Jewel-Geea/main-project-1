@@ -1,0 +1,600 @@
+:root {
+  --borderBlue: 20px solid #0074b6;
+  --borderPurple: 20px solid #bd00ff;
+  --borderYellow: 20px solid #ffa943;
+  --blue: #0074b6;
+  --purple: #bd00ff;
+  --yellow: #ffa943;
+  --red: #ff0000;
+  --green: #89c15e;
+  --white: #ffffff;
+  --ringColorGreen: #2e9a2563;
+}
+html {
+  background-color: var(--green);
+}
+
+body {
+  height: 80vh;
+  width: 94vw;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 4.5rem;
+}
+
+nav ul {
+  list-style-type: none;
+  display: inline;
+}
+
+.u1,
+.u2 {
+  background-color: var(--white);
+}
+
+.parent_u {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.parent_u li:last-child {
+  color: #252525;
+  font-size: 40px;
+  font-family: 'Roboto',sans-serif;
+  font-weight: 700;
+  line-height: 46.69px;
+  text-align: center;
+}
+#ruleButton {
+  display: block !important;
+}
+.u1,
+.u2 {
+  width: 120px;
+  height: 116px;
+  border-radius: 0.5rem;
+}
+
+.gameTitle {
+  color: var(--white);
+  font-size: 20px;
+}
+
+.gameTitle ul li {
+  letter-spacing: 3px;
+  font-family: 'Roboto',sans-serif;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  text-align: left;
+  font-size: 31px;
+}
+
+.parent_u ul li {
+  color: #656565;
+  font-family: 'Roboto',sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+.parent1 {
+  border: 0.2rem solid var(--white);
+  position: relative;
+  border-radius: 0.5rem;
+  width: 50%;
+  left: 25%;
+  top: 30px;
+  margin-top: 0.4rem;
+}
+
+/* Button CSS */
+.parent_button #first-button,
+.parent_button #second-button,
+.parent_button #third-button {
+  border-radius: 50%;
+  height: 100px;
+  position: relative;
+  margin: 2rem;
+  width: 100px;
+}
+
+.parent_button {
+  display: flex;
+  width: 80%; /* Set a specific width or max-width */
+  max-width: 600px; /* Optional: limit the maximum width */
+  top: 2rem;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto; /* Center the container */
+}
+
+.border {
+  border: 6px solid #000000a3;
+  position: absolute;
+}
+
+#b1 {
+  position: absolute;
+  width: 4.2rem;
+  transform: rotate(180deg);
+  top: 22%;
+  left: 44.19%;
+}
+
+#b2 {
+  position: absolute;
+  width: 7.9rem;
+  transform: rotate(117deg);
+  bottom: 46%;
+  right: 30.5%;
+}
+
+#b3 {
+  position: absolute;
+  width: 8.7rem;
+  transform: rotate(-120deg);
+  top: 53%;
+  right: 42.19%;
+}
+#first-button,
+#second-button,
+#third-button {
+  z-index: 20;
+}
+.parent_button button:hover {
+  transform: scale(1.1);
+}
+
+#first-button {
+  border: var(--borderBlue);
+}
+
+#second-button {
+  border: var(--borderPurple);
+}
+
+#third-button {
+  border: var(--borderYellow);
+}
+
+#second-image {
+  width: 26px;
+}
+
+img {
+  width: 43px;
+}
+
+.gameRules {
+  width: 16rem;
+  /* height: 124px; */
+  /* min-height: 200px; */
+  background-color: #004429;
+  border: 7px solid var(--white);
+  font-size: 0.7rem;
+  position: fixed;
+  top: 26%;
+  left: 77.2%;
+  max-width:257px;max-height:270px;
+  display: none;
+  color: var(--white);
+  font-family: 'Roboto', sans-serif;
+  border-radius: 0.5rem;
+  font-weight: 400;
+  line-height: 15.23px;
+}
+
+.gameRules ul {
+  list-style-type: none;
+}
+
+.gameRules ul li {
+  margin-bottom: 0.9rem;
+  margin-right: 0;
+}
+
+.gameRules ul li::before {
+  list-style-type: square;
+  content: "";
+  background-color: var(--yellow);
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  left: 1.4em;
+}
+
+.gameRules ul, #gameRulesHeading {
+  position: relative;
+  bottom: 1.5rem;
+}
+#xButton {
+  border-radius: 50%;
+  position: relative;
+  bottom: 1.3rem;
+  left: 15.1rem;
+  display: inline;
+  width: 43px;
+  
+  background: var(--red);
+  color: var(--white);
+  font-family: "Dangrek", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 34.49px;
+  padding-bottom: 10px;
+  text-align: center;
+  height: 40px;
+  border: 5px solid var(--white);
+}
+
+#nextButton {
+  left: 90.2%;
+
+  text-align: left;
+  padding-top: 6px;
+  padding-left: 15px;
+  min-block-size: 20px;
+}
+
+.ruleNextButtonCombo {
+  background-color: transparent;
+  border: 2px solid var(--white);
+  color: var(--white);
+  height: 40px;
+  width: 75px;
+  border-radius: 0.5rem;
+  font-family: 'Roboto',sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 24.61px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  position: fixed;
+  top: 30rem;
+  left: 82%;
+}
+#gameRulesHeading {
+  display: block;
+  font-size: 16px;
+  text-align: center;
+}
+
+.scissorStone,
+.paperScissor,
+.stonePaper,
+.rockScissor,
+.paperRock,
+.scissorPaper,
+.paperPaper,
+.scissorScissor,
+.stoneStone {
+  display: flex;
+  gap: 5rem;
+  width: 100%;
+  top: 6.4rem;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 1st = stone 2nd = scissor 3rd = paper */
+.scissor,
+.stone,
+.paper {
+  border-radius: 50%;
+  height: 100px;
+  position: relative;
+  margin: 2rem;
+  width: 100px;
+  background-color: var(--white) !important;
+}
+
+.scissor {
+  border: var(--borderPurple);
+}
+.paper {
+  border: var(--borderYellow);
+}
+.stone {
+  border: var(--borderBlue);
+}
+
+.scissorStone .stone {
+  box-shadow: 0 0 0 15px var(--ringColorGreen), 0 0 0 30px var(--ringColorGreen),
+    0 0 0 45px var(--ringColorGreen), 0 0 0 60px var(--ringColorGreen),
+    0 0 0 75px var(--ringColorGreen);
+  animation: breathe 4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    box-shadow: 0 0 0 15px var(--ringColorGreen),
+      0 0 0 30px var(--ringColorGreen), 0 0 0 45px var(--ringColorGreen),
+      0 0 0 60px var(--ringColorGreen), 0 0 0 75px var(--ringColorGreen);
+  }
+  50% {
+    box-shadow: 0 0 0 25px var(--ringColorGreen),
+      0 0 0 50px var(--ringColorGreen), 0 0 0 75px var(--ringColorGreen),
+      0 0 0 100px var(--ringColorGreen), 0 0 0 105px var(--ringColorGreen);
+  }
+}
+
+.scissor img {
+  width: 30px;
+}
+
+.loseMessage,
+.winMessage,
+.tieMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loseHeading,
+.winHeading,
+.tieHeading {
+  font-family: 'Roboto',sans-serif;
+  color: var(--white);
+  display: inline-block;
+  font-weight: 600;
+  line-height: 17.58px;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+.tieHeading {
+  font-size: 24px;
+}
+.playAgain {
+  color: #6b6b6b;
+  font-family: 'Roboto',sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 17.58px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  width: 132px;
+  height: 41px;
+  border-radius: 10px;
+}
+
+.playAgain:hover {
+  letter-spacing: 0.24em;
+}
+
+.loseHeading span:first-child,
+.winHeading span:first-child {
+  font-size: 24px;
+}
+
+.paperScissor .scissor,
+.stonePaper .paper,
+.rockScissor .stone,
+.paperRock .paper,
+.scissorPaper .scissor {
+  animation: breathe 4s ease-in-out infinite;
+}
+
+.paperScissor,
+.scissor:hover,
+.stonePaper,
+.paper:hover,
+.rockScissor,
+.stone:hover,
+.paperRock,
+.paper:hover,
+.scissorPaper,
+.scissor:hover {
+  transform: scale(1.1) !important;
+}
+.allClass {
+  display: none;
+}
+.parentVictory {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 90vh;
+  margin-bottom: 20px;
+  width: 99vw;
+}
+
+#victoryImage {
+  background-color: transparent !important;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+.starAnimation {
+  position: relative;
+  top: -117.5%;
+  right: 42.8%;
+  transform: translate(50%, -50%);
+  border: 1px solid black;
+}
+.victoryHeading {
+  line-height: 29.58px;
+}
+.victoryHeading span:first-child {
+  font-size: 40px !important;
+}
+.victoryHeading span:last-child() {
+  margin-top: 10px;
+}
+
+#nextButton {
+  display: none;
+}
+
+/* Common styles for all stars */
+.stars {
+  width: 30px;
+  height: 30px;
+  background-color: #d9d9d9d4;
+  position: absolute;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  animation: twinkle 2s infinite ease-in-out, rotate 4s infinite linear;
+  transform-origin: center center;
+}
+
+/* Enhanced twinkle effect with scale and rotation */
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1.4) rotate(15deg);
+  }
+}
+
+/* Add rotation animation */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Position stars in a circular layout */
+#stars1 {
+  top: calc(83vh - 100px);
+  left: calc(60vw - 30px);
+  animation-delay: 0s;
+}
+#stars2 {
+  top: calc(63vh - 88px);
+  left: calc(50vw + 80px);
+  animation-delay: 0.2s;
+}
+#stars3 {
+  top: calc(50vh + 30px);
+  left: calc(50vw + 100px);
+  animation-delay: 0.4s;
+}
+#stars4 {
+  top: calc(50vh + 120px);
+  left: calc(50vw + 60px);
+  animation-delay: 0.6s;
+}
+#stars5 {
+  top: calc(50vh + 150px);
+  left: calc(50vw - 30px);
+  animation-delay: 0.8s;
+}
+#stars6 {
+  top: calc(50vh + 120px);
+  left: calc(50vw - 120px);
+  animation-delay: 1s;
+}
+#stars7 {
+  top: calc(50vh + 30px);
+  left: calc(50vw - 160px);
+  animation-delay: 1.2s;
+}
+#stars8 {
+  top: calc(56vh - 80px);
+  left: calc(51vw - 120px);
+  animation-delay: 1.4s;
+}
+#stars9 {
+  top: calc(60vh - 100px);
+  left: calc(50vw - 30px);
+  animation-delay: 1.6s;
+}
+#stars1 {
+  width: 80px;
+  height: 80px;
+}
+#stars2 {
+  width: 60px;
+  height: 60px;
+}
+#stars3 {
+  width: 40px;
+  height: 40px;
+}
+#stars4 {
+  width: 70px;
+  height: 70px;
+}
+#star5 {
+  width: 50px;
+  height: 50px;
+}
+#stars6 {
+  width: 55px;
+  height: 55px;
+}
+#stars7 {
+  width: 45px;
+  height: 45px;
+}
+#stars8 {
+  width: 65px;
+  height: 65px;
+}
+#stars9 {
+  width: 75px;
+  height: 75px;
+}
+
+@media (min-width: 1320px) {
+  index.html body {
+    transform: scale(1.1);
+    top: 3rem;
+    position: relative;
+    width: 90vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .gameTitle,
+  .parent_u,
+  .parent_button {
+    transform: scale(0.7);
+    top: 0;
+  }
+  #nextButton,
+  #ruleButton {
+    top: 27rem;
+  }
+}
+
+.pick {
+  font-family: 'Roboto',sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 19.92px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: var(--white);
+}
