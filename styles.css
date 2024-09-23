@@ -447,22 +447,8 @@ img {
 .stars {
   width: 30px;
   height: 30px;
-  background-color: #d9d9d9d4;
   position: absolute;
-  clip-path: polygon(
-    50% 0%,
-    61% 35%,
-    98% 35%,
-    68% 57%,
-    79% 91%,
-    50% 70%,
-    21% 91%,
-    32% 57%,
-    2% 35%,
-    39% 35%
-  );
   animation: twinkle 2s infinite ease-in-out, rotate 4s infinite linear;
-  transform-origin: center center;
 }
 
 /* Enhanced twinkle effect with scale and rotation */
@@ -473,7 +459,7 @@ img {
     transform: scale(1) rotate(0deg);
   }
   50% {
-    opacity: 0.3;
+    opacity: 0.8;
     transform: scale(1.4) rotate(15deg);
   }
 }
